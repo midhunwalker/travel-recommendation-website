@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Travel Recommendation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<h1>Discover Your Perfect Travel Destination</h1>
+<p>We help you explore beaches, temples, and destinations based on your country preference.</p>
+
+<h2>Beach Recommendation</h2>
+<div class="card">
+  <h3>Bali Beach</h3>
+  <p>A beautiful tropical paradise with clear blue waters.</p>
+  <img src="images/beach1.jpg">
+  <img src="images/beach2.jpg">
+</div>
+
+<h2>Temple Recommendation</h2>
+<div class="card">
+  <h3>Meenakshi Temple</h3>
+  <p>A historic temple known for its architecture and culture.</p>
+  <img src="images/temple1.jpg">
+  <img src="images/temple2.jpg">
+</div>
+
+<h2>Find by Country</h2>
+<select id="country">
+  <option value="">Select Country</option>
+  <option value="India">India</option>
+  <option value="Japan">Japan</option>
+</select>
+
+<button onclick="recommendCountry()">Get Recommendation</button>
+
+<div id="countryResult"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

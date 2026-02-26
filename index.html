@@ -2,49 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Travel Recommendation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+  <main>
+    <!-- Introduction Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Discover Your Perfect Travel Destination</h1>
+        <p class="hero-description">Welcome to Smart Travel Recommendation, your trusted companion for finding the perfect travel destinations. Whether you're seeking pristine beaches, ancient temples, or exploring destinations by country, we help you discover places that match your dreams. Let us guide you through the world's most beautiful locations tailored to your preferences.</p>
+      </div>
+    </section>
 
-<h1>Discover Your Perfect Travel Destination</h1>
-<p>We help you explore beaches, temples, and destinations based on your country preference.</p>
+    <!-- Beach Recommendation -->
+    <section class="recommendation-section" aria-labelledby="beach-heading">
+      <div class="container">
+        <h2 id="beach-heading">Beach Recommendation</h2>
+        <article class="card">
+          <h3>Bali Beach, Indonesia</h3>
+          <p>Experience the breathtaking beauty of Bali's pristine beaches. With crystal-clear turquoise waters, soft white sand, and stunning sunsets, Bali Beach offers a tropical paradise perfect for relaxation, water sports, and unforgettable memories. Surrounded by lush greenery and vibrant culture, this destination is a must-visit for beach lovers.</p>
+          <div class="image-gallery">
+            <img src="images/beach1.jpg" alt="Bali Beach coastline with turquoise waters and palm trees" loading="lazy">
+            <img src="images/beach2.jpg" alt="Sunset view at Bali Beach with golden sky reflection" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
 
-<h2>Beach Recommendation</h2>
-<div class="card">
-  <h3>Bali Beach</h3>
-  <p>A beautiful tropical paradise with clear blue waters.</p>
-  <img src="images/beach1.jpg">
-  <img src="images/beach2.jpg">
-</div>
+    <!-- Temple Recommendation -->
+    <section class="recommendation-section" aria-labelledby="temple-heading">
+      <div class="container">
+        <h2 id="temple-heading">Temple Recommendation</h2>
+        <article class="card">
+          <h3>Meenakshi Temple, India</h3>
+          <p>Discover the magnificent Meenakshi Temple, a historic architectural marvel located in Madurai, Tamil Nadu. This ancient temple is renowned for its intricate carvings, towering gopurams (gateway towers), and rich spiritual heritage. A symbol of Dravidian architecture, the temple attracts millions of visitors who come to admire its artistic beauty and experience its divine atmosphere.</p>
+          <div class="image-gallery">
+            <img src="images/temple1.jpg" alt="Meenakshi Temple exterior showing colorful gopuram towers" loading="lazy">
+            <img src="images/temple2.jpg" alt="Intricate carved pillars inside Meenakshi Temple" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
 
-<h2>Temple Recommendation</h2>
-<div class="card">
-  <h3>Meenakshi Temple</h3>
-  <p>A historic temple known for its architecture and culture.</p>
-  <img src="images/temple1.jpg">
-  <img src="images/temple2.jpg">
-</div>
+    <!-- Country-based Recommendation -->
+    <section class="country-section" aria-labelledby="country-heading">
+      <div class="container">
+        <h2 id="country-heading">Find Destinations by Country</h2>
+        <p class="section-description">Select a country below to discover personalized travel recommendations tailored to each destination.</p>
+        
+        <div class="country-selector">
+          <label for="country-select" class="visually-hidden">Select a country</label>
+          <select id="country-select" class="country-dropdown" aria-label="Choose a country for recommendations">
+            <option value="">-- Select a Country --</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+            <option value="Australia">Australia</option>
+          </select>
+          <button id="recommend-btn" class="btn btn-primary" type="button">Get Recommendation</button>
+        </div>
 
-<h2>Find by Country</h2>
-<select id="country">
-  <option value="">Select Country</option>
-  <option value="India">India</option>
-  <option value="Japan">Japan</option>
-</select>
+        <div id="country-result" class="country-result" role="region" aria-live="polite" aria-atomic="true"></div>
+      </div>
+    </section>
+  </main>
 
-<button onclick="recommendCountry()">Get Recommendation</button>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Smart Travel Recommendation. All rights reserved.</p>
+    </div>
+  </footer>
 
-<div id="countryResult"></div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
